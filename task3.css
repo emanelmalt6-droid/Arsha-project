@@ -1,0 +1,536 @@
+:root {
+  --bg-primary: #37517e;
+  --btn-bg: #47b2e4;
+  --btn-hover: #209dd8;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-primary);
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Navbar Styles */
+.fixed-top {
+  background-color: var(--bg-primary) !important;
+  box-shadow: none !important;
+}
+
+#header .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+}
+
+#header .nav-link:hover, 
+#header .nav-link.active {
+  color: var(--btn-bg);
+}
+
+/* Buttons Styling */
+.btn-get-started {
+  background-color: var(--btn-bg);
+  color: #ffffff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-get-started:hover {
+  background-color: var(--btn-hover);
+  color: #ffffff;
+}
+
+.btn-watch-video {
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-watch-video:hover {
+  color: var(--btn-bg) !important;
+}
+
+/* Hero Section */
+#hero {
+  background-color: var(--bg-primary);
+  padding-top: 80px;
+}
+
+.hero-img img {
+  animation: float 2s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-12px); }
+}
+
+/* Clients Section Styles */
+.clients-section {
+  background-color: #f3f5fa;
+}
+
+.client-logo img {
+  max-width: 45%;
+  transition: all 0.4s ease-in-out;
+  filter: grayscale(100%); /* بيخلي اللوجو أبيض وأسود زي القالب الأصلي */
+  opacity: 0.6;
+}
+
+.client-logo img:hover {
+  filter: none; /* بيلغي الفلتر ويرجع الألوان لما تقفي بالماوس عليه */
+  opacity: 1;
+  transform: scale(1.1); /* تكبير خفيف */
+}
+
+/* ================= About Us Section Styles ================= */
+.about {
+  background-color: #ffffff;
+}
+
+/* Section Title Styling */
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #37517e;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #47b2e4;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.about p {
+  color: #444444;
+  line-height: 1.7;
+}
+
+/* Icons & List */
+.about ul i {
+  color: #47b2e4 !important;
+}
+
+/* Read More Button */
+.btn-read-more {
+  color: #47b2e4;
+  border: 2px solid #47b2e4;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-read-more:hover {
+  background-color: #47b2e4;
+  color: #ffffff;
+}
+
+
+/* تنسيق علامة الصح البديلة */
+.check-icon {
+  color: #47b2e4;
+  font-size: 18px;
+}
+
+/* التأكد من تلوين العنصر النشط عند الـ ScrollSpy */
+#header .nav-link.active {
+  color: #47b2e4 !important;
+  font-weight: 600;
+}
+
+/* لون اللينك لما تقفي عليه أو لما يكون النشط (Active) */
+#header .navbar-nav .nav-link.active,
+#header .navbar-nav .nav-link:hover {
+  color: #47b2e4 !important; /* اللون الأزرق الفاتح الخاص بـ Arsha */
+  font-weight: 600;
+}
+
+/* باقي اللينكات العادية */
+#header .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  transition: all 0.3s ease;
+}
+
+/* ================= Why Us Styles ================= */
+.why-us {
+  background-color: #f3f5fa; /* الخلفية الرمادي الفاتحة */
+}
+
+/* Accordion Custom Styling */
+.why-us .accordion-item {
+  border: none;
+  background: #ffffff;
+}
+
+.why-us .accordion-button {
+  color: #37517e;
+  background-color: #ffffff;
+  font-size: 16px;
+  box-shadow: none !important;
+}
+
+.why-us .accordion-button:not(.collapsed) {
+  color: #47b2e4;
+  background-color: #ffffff;
+}
+
+.why-us .accordion-button span {
+  color: #47b2e4 !important;
+}
+
+.why-us .accordion-body {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ================= Skills Section Styles ================= */
+.skills-section {
+  background-color: #ffffff;
+}
+
+.skills-section .progress {
+  background-color: #e8ecef;
+  border-radius: 0;
+  overflow: visible;
+  height: 10px !important;
+}
+
+.skills-section .progress-bar {
+  background-color: #37517e !important; /* نفس درجة اللون الكحلي الخاصة بالتصميم */
+  transition: width 0.6s ease;
+}
+
+
+/* ================= Services Styles ================= */
+.services .section-title h2 {
+  color: #37517e;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+.services .title-line {
+  width: 50px;
+  height: 3px;
+  background-color: #47b2e4;
+}
+
+.services .icon-box {
+  transition: all ease-in-out 0.3s;
+  border: 1px solid #ffffff;
+}
+
+/* رفع الكارت خفيف عند الـ Hover */
+.services .icon-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* الأيقونة */
+.services .icon-box .icon i {
+  color: #47b2e4;
+  font-size: 32px;
+}
+
+/* العناوين داخل الكروت - موحدة باللون الكحلي بحجم متناسق */
+.services .icon-box h4 a {
+  color: #37517e;
+  font-size: 18px;
+  font-weight: 700;
+  transition: ease-in-out 0.3s;
+}
+
+/* تغيير لون العنوان للأزرق الفاتح عند الـ Hover فقط */
+.services .icon-box:hover h4 a {
+  color: #47b2e4;
+}
+
+/* وصف الكارت */
+.services .icon-box .card-text {
+  color: #444444;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+
+/* ================= Work Process Styles ================= */
+.work-process .process-card {
+  transition: all 0.3s ease-in-out;
+  border-color: #f0f0f0 !important;
+}
+
+.work-process .process-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* تأثير التكبير (Zoom Hover) للصور */
+.work-process .img-wrapper {
+  overflow: hidden;
+}
+
+.work-process .process-img {
+  transition: transform 0.4s ease-in-out;
+}
+
+.work-process .process-card:hover .process-img {
+  transform: scale(1.08); /* تكبير سلس للصورة عند المرور */
+}
+
+/* دائرة رقم الخطوة (01, 02, 03) */
+.work-process .step-number {
+  width: 48px;
+  height: 48px;
+  background-color: #47b2e4;
+  border-radius: 50%;
+  font-size: 18px;
+  margin-top: -35px;
+  position: relative;
+  z-index: 2;
+  border: 3px solid #ffffff;
+}
+
+/* ================= Team Section Styling ================= */
+.team {
+  background-color: #ffffff;
+}
+
+.team .section-title h2 {
+  color: #37517e;
+}
+
+.team .title-line {
+  width: 50px;
+  height: 3px;
+  background-color: #47b2e4;
+}
+
+.team .member-info h4 {
+  color: #37517e;
+}
+
+.team .member-info p {
+  line-height: 1.5;
+}
+
+/* Hover Animation for Member Card */
+.team .member-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team .member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Social Media Icons Style & Hover */
+.team .social-icon {
+  width: 36px;
+  height: 36px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.team .social-icon:hover {
+  background-color: #47b2e4 !important;
+  color: #ffffff !important;
+}
+
+/* ================= Pricing Section Styling ================= */
+.pricing .section-title h2,
+.pricing .pricing-title,
+.pricing .currency,
+.pricing .amount {
+  color: #37517e;
+}
+
+.pricing .title-line {
+  width: 50px;
+  height: 3px;
+  background-color: #47b2e4;
+}
+
+/* Base Card Style */
+.pricing .pricing-card {
+  transition: all 0.3s ease-in-out;
+  border-top: 4px solid transparent;
+}
+
+/* Hover Effect for Regular Cards */
+.pricing .pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Featured Card (Business Plan) */
+.pricing .pricing-card.featured {
+  border-top: 4px solid #47b2e4;
+}
+
+/* Buttons Styles */
+.pricing .btn-outline-custom {
+  color: #47b2e4;
+  border: 2px solid #47b2e4;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.pricing .btn-outline-custom:hover {
+  background-color: #47b2e4;
+  color: #ffffff;
+}
+
+.pricing .btn-primary-custom {
+  background-color: #47b2e4;
+  border: 2px solid #47b2e4;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.pricing .btn-primary-custom:hover {
+  background-color: #359ed1;
+  border-color: #359ed1;
+}
+
+/* ================= Testimonials Section Styling ================= */
+.testimonials .section-title h2,
+.testimonials h4 {
+  color: #37517e;
+}
+
+.testimonials .title-line {
+  width: 50px;
+  height: 3px;
+  background-color: #47b2e4;
+}
+
+.testimonials .testimonial-item img {
+  object-fit: cover;
+}
+
+.testimonials .bi-quote {
+  color: rgba(71, 178, 228, 0.6) !important;
+}
+
+/* Custom Dots Styling */
+.testimonials .carousel-indicators button {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: #ddd !important;
+  border: none !important;
+  opacity: 1 !important;
+  margin: 0 4px !important;
+  transition: all 0.3s ease;
+}
+
+.testimonials .carousel-indicators button.active {
+  background-color: #47b2e4 !important;
+}
+  
+/* ================= FAQ Section Styling ================= */
+.faq .section-title h2 {
+  color: #37517e;
+}
+
+.faq .title-line {
+  width: 50px;
+  height: 3px;
+  background-color: #47b2e4;
+}
+
+.faq .accordion-button {
+  color: #37517e;
+  background-color: #ffffff;
+  box-shadow: none !important;
+  transition: color 0.3s ease;
+}
+
+.faq .accordion-button:not(.collapsed) {
+  color: #47b2e4;
+  background-color: #ffffff;
+}
+
+.faq .accordion-button i {
+  color: #47b2e4 !important;
+}
+
+.faq .accordion-body {
+  line-height: 1.6;
+}
+
+/* ================= Newsletter Section Styling ================= */
+.newsletter .newsletter-box {
+  background-color: #f3f5fa !important;
+}
+
+.newsletter .btn-primary-custom {
+  background-color: #47b2e4;
+  border: none;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter .btn-primary-custom:hover {
+  background-color: #359ed1;
+}
+
+.newsletter .input-group {
+  max-width: 500px;
+}
+
+/* Card Hover Effect */
+.blog-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px); /* الكارت نفسه يرتفع لأعلى سنّة */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Image Zoom Effect */
+.blog-card .img-container {
+  overflow: hidden; /* عشان الصورة لما تكبر ما تطلعش بره الكارت */
+}
+
+.blog-card .card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover .card-img-top {
+  transform: scale(1.08); /* زوم لطيف للصورة */
+}
+
+/* Read More Arrow Animation */
+.blog-card .read-more-btn i {
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover .read-more-btn i {
+  transform: translateX(6px); /* السهم يتحرك لليمين/الشمال مع الهوفر */
+}
+
+/* Contact Section Form Focus */
+.contact .form-control:focus {
+  border-color: #47b2e4;
+  box-shadow: 0 0 0 0.25rem rgba(71, 178, 228, 0.25);
+}
+
+.contact .btn:hover {
+  background-color: #359ed1 !important;
+}
+
+.footer .footer-links a:hover {
+  color: #47b2e4 !important;
+}
+
+.footer .social-icon:hover {
+  color: #47b2e4 !important;
+  border-color: #47b2e4 !important;
+}
